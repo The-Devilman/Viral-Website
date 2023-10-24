@@ -1,0 +1,116 @@
+/* --- v0.00.4 --- */
+
+/* --- basic config --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    color: rgb(238, 36, 61);
+    background-color: rgb(13, 16, 27);
+}
+
+body {
+    background-color: var(--color-B);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* --- root --- */
+
+:root {
+    --color-A: #0d101b;
+    --color-B: #281a2d;
+    --color-C: #6b2341;
+    --color-D: #af2747;
+    --color-E: #ee243d;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+}
+
+.line {
+    border-right: 2px solid var(--color-E);
+    color: var(--color-D);
+    font-size: 76px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .typing-animation {
+    animation: blinkCursor 500ms steps(30) infinite normal,
+      typing 3s steps(30) 0s normal both;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 7.1em;
+    }
+  }
+
+  @keyframes blinkCursor {
+    from {
+      border-right-color: var(--color-E);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+  
+.high-security-area {
+    align-self: center;
+    width: 60%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+}
+
+input[type=text] {
+    text-align: center;
+    outline: 0;
+    display: block;
+    margin: auto;
+    color: white;
+    width: 50%;
+    padding: 5px 7px;
+    border: none;
+    border-bottom: solid 2px var(--color-D);
+    background-color: var(--color-B);
+}
+
+input[type=text]:focus {
+    background-color: var(--color-C);
+}
+
+input[type=button] {
+    display: block;
+    margin: auto;
+    background-color: var(--color-D);
+    color: var(--color-A);
+    padding: 5px 17px;
+    border: none;
+}
+
+input[type=button]:hover {
+    cursor: pointer;
+}

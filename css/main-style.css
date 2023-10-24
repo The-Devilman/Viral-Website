@@ -1,0 +1,395 @@
+/* --- v0.00.4 --- */
+
+/* --- basic config. --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--color-A);
+    border: 1px solid var(--color-C);
+    border-top: none;
+    border-bottom: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-E);
+}
+
+::selection {
+    color: var(--color-E);
+    background-color: var(--color-A);
+}
+
+body {
+    background-color: var(--color-B);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* --- root --- */
+
+:root {
+    --color-A: #0d101b;
+    --color-B: #281a2d;
+    --color-C: #6b2341;
+    --color-D: #af2747;
+    --color-E: #ee243d;
+}
+
+/* --- header --- */
+
+.logo-area {
+    width: 10%;
+    display: flex;
+    align-content: center;
+}
+
+.image-logo {
+    display: block;
+    margin: auto;
+    align-self: center;
+    border-radius: 100%;
+    border: 2px solid var(--color-C);
+    cursor: default;
+}
+
+.image-link {
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    background-color: var(--color-A);
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid var(--color-C);
+    z-index: 1;
+}
+
+.title {
+    float: left;
+    align-self: center;
+}
+
+.title.logo {
+    width: 70%;
+}
+
+.title.link {
+    width: 30%;
+}
+
+header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.title h1 {
+    margin-left: 1%;
+    color: var(--color-E);
+}
+
+.link > a {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: var(--color-E);
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+.link > a:hover {
+    color: white;
+}
+
+/* --- banner --- */
+
+.banner {
+    width: 100%;
+    height: 40em;
+    display: flex;
+    align-content: center;
+    border-bottom: 1px solid var(--color-C);
+}
+
+.banner#banner-danger {
+    background-image: url('../media/banner/banner.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner-caption {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    color: white;
+}
+
+.banner-caption > h1 {
+    font-size: 76px;
+    text-align: right;
+    margin-right: 5%;
+}
+
+.banner-caption > p {
+    font-size: 24px;
+    text-align: right;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/* --- main area --- */
+
+main {
+    width: 100%;
+    height: auto;
+}
+
+/* --- microscope --- */
+
+.microscope-area {
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    align-content: center;
+    padding: 5px;
+}
+
+.microscope {
+    float: left;
+    align-self: center;
+}
+
+.lens {
+    width: 50%;
+    height: auto;
+}
+
+.microscope-image-properties {
+    width: 15em;
+    height: 15em;
+    margin: auto;
+    display: flex;
+    border: 1px solid var(--color-C);
+}
+
+#microscope-image {
+    border-radius: 100%;
+    background-image: url('../media/images/virus.png');
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.description {
+    width: 50%;
+    height: auto;
+}
+
+.description > p {
+    text-align: justify;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+/* --- Column --- */
+
+#beatrix-gif {
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+
+#solum-image {
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+
+.column-area {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    align-self: center;
+}
+
+.left-side {
+    float: left;
+    width: 50%;
+}
+
+.right-side {
+    float: right;
+    width: 50%;
+}
+
+.text > h1 {
+    text-align: center;
+}
+
+.text > h1::before {
+    content: "⊲ ";
+    color: var(--color-C);
+}
+
+.text > p {
+    color: white;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    text-align: justify;
+}
+
+.column-area::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- wiki area --- */
+
+.wiki-area {
+    width: 100%;
+    height: auto;
+}
+
+summary {
+    font-size: 40px;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    outline: 0;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: '▶ ';
+}
+
+details[open] > summary::before {
+    content: '▼ ';
+    color: var(--color-E);
+}
+
+summary:hover {
+    color: var(--color-E);
+}
+
+details > summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+/* --- divStyle --- */
+
+.divStyle {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    padding: 5px;
+    color: white;
+}
+
+.divStyle > h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    color: white;
+}
+
+.divStyle > h2 {
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.divStyle > h2::before {
+    content: "| ";
+    color: var(--color-C);
+}
+
+.divStyle > h3 {
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.divStyle > h3::before {
+    content: "▸ ";
+    color: var(--color-C);
+}
+
+.divStyle > p {
+    text-align: justify;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+/* --- footer --- */
+
+footer {
+    width: 100%;
+    height: 10em;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-A);
+    border-top: 1px solid var(--color-C);
+}
+
+.credit {
+    float: left;
+    align-self: center;
+    text-align: center;
+}
+
+.left {
+    width: 50%;
+}
+
+.right {
+    width: 50%;
+}
+
+.left > p {
+    color: var(--color-E);
+    padding: 25px 0px;
+}
+
+.right > p {
+    color: var(--color-E);
+}
+
+footer::after {
+    content: "";
+    display: table;
+    clear: both;
+}

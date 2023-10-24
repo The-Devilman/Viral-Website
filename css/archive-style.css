@@ -1,0 +1,158 @@
+/* --- v0.00.4 -- */
+
+/* --- basic config. --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--color-D);
+    border: 1px solid var(--color-C);
+    border-top: none;
+    border-bottom: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-A);
+}
+
+body {
+    background-color: var(--color-E);
+    font-family: 'Courier New';
+    color: white;
+}
+
+/* --- root --- */
+
+:root {
+    --color-A: #313342;
+    --color-B: #999FCF;
+    --color-C: #6A6E8F;
+    --color-D: #3A3D4F;
+    --color-E: #262733;
+}
+
+/* --- main area --- */
+
+main {
+    width: 100%;
+    height: auto;
+}
+
+/* --- header (data area) --- */
+
+header {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 2%;
+    padding: 20px;
+    background-color: var(--color-D);
+}
+
+header > h1 {
+    text-align: center;
+}
+
+.profile-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-content: center;
+}
+
+.profile {
+    float: left;
+    align-self: center;
+}
+
+.profile.picture {
+    width: 50%;
+    height: auto;
+}
+
+#icon {
+    border-radius: 100%;
+    border: 1px solid var(--color-C);
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+}
+
+.profile.publisher {
+    width: 50%;
+    height: auto;
+}
+
+.publisher > ul {
+    list-style-type: none;
+    margin-left: 10%;
+}
+
+.publisher li {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- paper area --- */
+
+.content {
+    width: 75%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+
+}
+
+.content > h1 {
+    text-align: center;
+    margin: 1%;
+}
+
+.content > h2 {
+    margin: 1% 5%;
+}
+
+.content > p {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: justify;
+}
+
+/* --- media area --- */
+
+img {
+    display: block;
+    margin: auto;
+}
+
+video {
+    display: block;
+    margin: auto;
+}
+
+/* --- emphasis --- */
+
+.emphasis {
+    color: var(--color-B);
+}
